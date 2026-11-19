@@ -1,0 +1,64 @@
+/* BMS Pro Dial site. Plain CSS, system fonts, no external files. */
+:root{--bg:#121417;--panel:#1c1f24;--line:#33383f;--text:#f1f2f4;--muted:#c2c7ce;--amber:#ffb13b;--btn:#c62828;--btn-hover:#a61f1f;--link:#8ec5ff}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--text);font:17px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+.wrap{max-width:920px;margin:0 auto;padding:0 18px}
+a{color:var(--link)}
+a:focus-visible,.play-btn:focus-visible{outline:3px solid var(--amber);outline-offset:2px}
+.skip{position:absolute;left:-999px;top:0;background:var(--amber);color:#000;padding:8px 12px;z-index:10}
+.skip:focus{left:8px}
+.site-head{background:#0b0c0e;border-bottom:1px solid var(--line)}
+.head-row{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:6px 18px;padding-top:12px;padding-bottom:12px}
+.brand{display:inline-flex;align-items:center;gap:10px;color:var(--text);text-decoration:none;font-weight:800;font-size:1.2rem;letter-spacing:.02em}
+.brand-logo{display:block;height:26px;width:auto}
+.brand-name{font-style:italic}
+nav{display:flex;flex-wrap:wrap;gap:4px 16px}
+nav a{color:var(--muted);text-decoration:none;padding:4px 0;font-weight:600}
+nav a:hover{color:var(--text)}
+nav a[aria-current="page"]{color:var(--text);border-bottom:2px solid var(--amber)}
+main{padding-top:20px;padding-bottom:28px}
+h1{font-size:1.75rem;line-height:1.2;margin:.3em 0 .4em}
+h2{font-size:1.25rem;line-height:1.25;margin:1.4em 0 .4em}
+.kicker{color:var(--amber);text-transform:uppercase;font-weight:800;letter-spacing:.06em;font-size:.85rem;margin:0}
+.lead{font-size:1.12rem;color:var(--text)}
+.small{font-size:.9rem;color:var(--muted)}
+ul{padding-left:1.2em}
+li{margin:.25em 0}
+.hero{padding:8px 0 4px}
+.play-btn{display:inline-block;background:var(--btn);color:#fff;font-weight:800;text-decoration:none;padding:12px 20px;border-radius:8px;font-size:1.05rem;border:2px solid #fff;letter-spacing:.01em}
+.play-btn::before{content:"\25B6\00A0";font-size:.85em}
+.play-btn:hover{background:var(--btn-hover)}
+.headline{background:var(--panel);border:1px solid var(--line);border-left:5px solid var(--amber);border-radius:8px;padding:6px 16px 10px;margin:18px 0}
+.headline h2{margin-top:.3em}
+.shots{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.shot{margin:0;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:8px}
+.shot img{display:block;width:100%;height:auto;border-radius:6px}
+.shot figcaption{font-size:.9rem;color:var(--muted);padding:6px 2px 0}
+.table-wrap{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:.95rem}
+caption{text-align:left;color:var(--muted);padding-bottom:6px}
+th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+thead th{background:var(--panel)}
+tbody th{font-weight:normal}
+td{min-width:4.6em}
+td.yes{font-weight:700}
+td.no{color:var(--muted)}
+.qa{border-bottom:1px solid var(--line);padding-bottom:6px}
+.qa h2{font-size:1.12rem}
+.site-foot{border-top:1px solid var(--line);background:#0b0c0e;padding:14px 0 18px;font-size:.95rem}
+.site-foot p{margin:.5em 0}
+@media (max-width:480px){body{font-size:16px}h1{font-size:1.45rem}.play-btn{display:block;text-align:center}}
+.headline-grid{display:grid;grid-template-columns:minmax(0,220px) 1fr;gap:18px;align-items:start;padding-top:10px}
+.headline-shot{max-width:260px}
+.builder{display:grid;grid-template-columns:minmax(0,360px) 1fr;gap:18px;align-items:start}
+.olds-photo{margin:0}
+.olds-photo img{display:block;width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;border-radius:8px;border:1px solid var(--line)}
+@media (max-width:640px){.headline-grid,.builder{grid-template-columns:1fr}.headline-shot{max-width:300px;margin:0 auto}}
+@media (max-width:640px){.shots{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.shot figcaption{font-size:.82rem}}
+.tier{display:inline-block;font-size:.72rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:#121417;background:var(--amber);border-radius:4px;padding:1px 6px;vertical-align:middle}
+.calc-group{font-size:1.05rem;margin:1.1em 0 .3em;color:var(--amber);text-transform:uppercase;letter-spacing:.05em}
+.calcs{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:8px}
+.calc{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:8px 12px}
+.calc h4{margin:0;font-size:1rem}
+.calc p{margin:.2em 0 0;color:var(--muted);font-size:.93rem}
